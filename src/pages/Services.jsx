@@ -2,46 +2,47 @@ import { Link } from 'react-router-dom'
 import './Services.css'
 
 export default function Services() {
+  const BASE = import.meta.env.BASE_URL
   const services = [
     {
       id: 1,
       name: 'Birthday Parties',
-      image: '/Images/Birthday Event.jpg',
+      image: `${BASE}Images/Birthday Event.jpg`,
       description: 'Perfect for all ages! Customizable menu for 20-200+ guests',
       includes: ['Full food service', 'Setup & cleanup', 'Menu customization', 'Serving staff'],
     },
     {
       id: 2,
       name: 'Weddings',
-      image: '/Images/Wedding.jpg',
+      image: `${BASE}Images/Wedding.jpg`,
       description: 'Make your special day even more memorable with gourmet cuisine',
       includes: ['Premium menu options', 'Professional catering', 'Bar service available', 'Full event coordination'],
     },
     {
       id: 3,
       name: 'Corporate Events',
-      image: '/Images/Corporate Event.jpg',
+      image: `${BASE}Images/Corporate Event.jpg`,
       description: 'Impress your team with quality food at your company event',
       includes: ['Flexible menu', 'Professional setup', 'Efficient service', 'Vegetarian options'],
     },
     {
       id: 4,
       name: 'Festivals & Fairs',
-      image: '/Images/Festival.jpg',
+      image: `${BASE}Images/Festival.jpg`,
       description: 'Boost foot traffic at your festival with our popular food truck',
       includes: ['Full-day operation', 'Equipment provided', 'Staff included', 'Permit assistance'],
     },
     {
       id: 5,
       name: 'Private Events',
-      image: '/Images/Private event.jpg',
+      image: `${BASE}Images/Private event.jpg`,
       description: 'Intimate gatherings with that special Coastal Bay Spuds touch',
       includes: ['Custom menu', 'Home delivery', 'Professional setup', 'Full service'],
     },
     {
       id: 6,
       name: 'Holiday Catering',
-      image: '/Images/Christmas.jpg',
+      image: `${BASE}Images/Christmas.jpg`,
       description: 'Celebrate the season with festive potato dishes and more',
       includes: ['Seasonal menu', 'Holiday decorations', 'Full catering service', 'Advance booking discount'],
     },

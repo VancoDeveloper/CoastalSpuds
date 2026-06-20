@@ -12,7 +12,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="footer-brand">
             <Link to="/" className="footer-logo-link">
-              <img src="/Images/CoastalBaySpudsLogo.jpg" alt="Coastal Bay Spuds" className="footer-logo" />
+              <img src={`${import.meta.env.BASE_URL}Images/CoastalBaySpudsLogo.jpg`} alt="Coastal Bay Spuds" className="footer-logo" />
               <span className="footer-brand-name">Coastal Bay Spuds</span>
             </Link>
             <p className="footer-tagline">Delicious gourmet potato dishes for your special events. Two trucks, one passion — great food.</p>

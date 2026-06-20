@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import './Home.css'
 
+const BASE = import.meta.env.BASE_URL
+
 export default function Home() {
   const [currentPair, setCurrentPair] = useState(0)
   const totalPairs = 3
@@ -12,42 +14,42 @@ export default function Home() {
       name: 'Sarah Johnson',
       title: 'Event Organizer',
       text: 'Coastal Spuds was the highlight of our corporate event! The food was delicious and the service was exceptional. Highly recommend!',
-      image: '/Images/Profile1.jpg'
+      image: `${BASE}Images/Profile1.jpg`
     },
     {
       id: 2,
       name: 'Mike Chen',
       title: 'Wedding Planner',
-      text: 'Our guests couldn\'t stop raving about the food truck! Fresh, creative, and absolutely delicious. Best catering choice we made.',
-      image: '/Images/Profile2.jpg'
+      text: "Our guests couldn't stop raving about the food truck! Fresh, creative, and absolutely delicious. Best catering choice we made.",
+      image: `${BASE}Images/Profile2.jpg`
     },
     {
       id: 3,
       name: 'Emma Davis',
       title: 'Party Host',
       text: 'What a fantastic experience! The team was professional, friendly, and the food was outstanding. Will definitely book again!',
-      image: '/Images/Profile3.jpg'
+      image: `${BASE}Images/Profile3.jpg`
     },
     {
       id: 4,
       name: 'James Wilson',
       title: 'Festival Organizer',
-      text: 'Coastal Spuds brought amazing energy and delicious food to our festival. The crowd loved them! Can\'t wait to work together again.',
-      image: '/Images/Profile4.jpg'
+      text: "Coastal Spuds brought amazing energy and delicious food to our festival. The crowd loved them! Can't wait to work together again.",
+      image: `${BASE}Images/Profile4.jpg`
     },
     {
       id: 5,
       name: 'Lisa Rodriguez',
       title: 'Business Owner',
       text: 'Perfect for our company gathering! The food quality, variety, and customer service were all top-notch. Highly impressed!',
-      image: '/Images/Profile5.jpg'
+      image: `${BASE}Images/Profile5.jpg`
     },
     {
       id: 6,
       name: 'David Thompson',
       title: 'Community Coordinator',
       text: 'The entire community loved Coastal Spuds at our event. Fresh ingredients, creative dishes, and amazing vibes all around!',
-      image: '/Images/Profile6.jpg'
+      image: `${BASE}Images/Profile6.jpg`
     }
   ]
 
@@ -61,10 +63,14 @@ export default function Home() {
   const nextReview = () => setCurrentPair((prev) => (prev + 1) % totalPairs)
   const prevReview = () => setCurrentPair((prev) => (prev - 1 + totalPairs) % totalPairs)
 
+  const heroStyle = {
+    backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(${BASE}Images/Coastal_spuds.jpeg)`
+  }
+
   return (
     <main className="home">
       {/* Hero Section */}
-      <section className="hero">
+      <section className="hero" style={heroStyle}>
         <div className="hero-content">
           <h1>Welcome to Coastal Spuds</h1>
           <p>Delicious Gourmet Potato Dishes for Your Special Events</p>
@@ -107,7 +113,7 @@ export default function Home() {
           <div className="menu-preview-grid">
             <div className="menu-item">
               <div className="menu-item-image">
-                <img src="/Images/Cheesyfries.jpg" alt="Cheesy Fries" />
+                <img src={`${BASE}Images/Cheesyfries.jpg`} alt="Cheesy Fries" />
               </div>
               <div className="menu-item-content">
                 <h3>Cheesy Fries</h3>
@@ -116,7 +122,7 @@ export default function Home() {
             </div>
             <div className="menu-item">
               <div className="menu-item-image">
-                <img src="/Images/ChipsandTenders.jpg" alt="Chips & Tenders" />
+                <img src={`${BASE}Images/ChipsandTenders.jpg`} alt="Chips & Tenders" />
               </div>
               <div className="menu-item-content">
                 <h3>Chips & Tenders</h3>
@@ -125,7 +131,7 @@ export default function Home() {
             </div>
             <div className="menu-item">
               <div className="menu-item-image">
-                <img src="/Images/Skewers.jpg" alt="Skewers" />
+                <img src={`${BASE}Images/Skewers.jpg`} alt="Skewers" />
               </div>
               <div className="menu-item-content">
                 <h3>Skewers</h3>
@@ -134,7 +140,7 @@ export default function Home() {
             </div>
             <div className="menu-item">
               <div className="menu-item-image">
-                <img src="/Images/RoastedCorn.jpg" alt="Roasted Corn" />
+                <img src={`${BASE}Images/RoastedCorn.jpg`} alt="Roasted Corn" />
               </div>
               <div className="menu-item-content">
                 <h3>Roasted Corn</h3>
@@ -157,7 +163,7 @@ export default function Home() {
           <div className="fleet-grid">
             <div className="fleet-card">
               <div className="fleet-image">
-                <img src="/Images/CoastalSpuds.png" alt="Coastal Spuds" />
+                <img src={`${BASE}Images/CoastalSpuds.png`} alt="Coastal Spuds" />
               </div>
               <div className="fleet-info">
                 <h3>Coastal Spuds</h3>
@@ -166,7 +172,7 @@ export default function Home() {
             </div>
             <div className="fleet-card">
               <div className="fleet-image">
-                <img src="/Images/CoastalSkewers.jpeg" alt="Coastal Skewers" />
+                <img src={`${BASE}Images/CoastalSkewers.jpeg`} alt="Coastal Skewers" />
               </div>
               <div className="fleet-info">
                 <h3>Coastal Skewers</h3>
@@ -181,16 +187,16 @@ export default function Home() {
       <section className="reviews-section section">
         <div className="container">
           <h2 className="section-title">What Our Clients Say</h2>
-          
+
           <div className="testimonials-carousel">
-            <button className="carousel-btn prev-btn" onClick={prevReview}>‹</button>
+            <button className="carousel-btn prev-btn" onClick={prevReview}>&#8249;</button>
 
             <div className="testimonials-pair">
               {[0, 1].map((offset) => {
                 const review = reviews[currentPair * 2 + offset]
                 return (
                   <div key={review.id} className="testimonial-card">
-                    <p className="testimonial-text">"{review.text}"</p>
+                    <p className="testimonial-text">&ldquo;{review.text}&rdquo;</p>
                     <div className="testimonial-author">
                       <img src={review.image} alt={review.name} className="author-image" />
                       <div className="author-info">
@@ -203,7 +209,7 @@ export default function Home() {
               })}
             </div>
 
-            <button className="carousel-btn next-btn" onClick={nextReview}>›</button>
+            <button className="carousel-btn next-btn" onClick={nextReview}>&#8250;</button>
           </div>
 
           <div className="carousel-dots">

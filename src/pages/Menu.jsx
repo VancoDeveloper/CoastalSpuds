@@ -4,16 +4,17 @@ import './Menu.css'
 export default function Menu() {
   const [selectedCategory, setSelectedCategory] = useState('all')
 
+  const BASE = import.meta.env.BASE_URL
   const menuItems = [
-    { id: 1, name: 'Cheesy Fries', category: 'fries', description: 'Golden fries loaded with melted cheese and toppings', image: '/Images/Cheesyfries.jpg' },
-    { id: 2, name: 'Waffle Fries', category: 'fries', description: 'Crispy waffle-cut fries with seasoning', image: '/Images/WaffleFries.jpg' },
-    { id: 3, name: 'Fries', category: 'fries', description: 'Classic golden fries with our special seasoning', image: '/Images/Fries.jpg' },
-    { id: 4, name: 'Chips & Tenders', category: 'main', description: 'Crispy chicken tenders with golden fries', image: '/Images/ChipsandTenders.jpg' },
-    { id: 5, name: 'Chips on a Stick', category: 'main', description: 'Delicious spiral-cut potato chips on a stick', image: '/Images/Chipsonastick.jpg' },
-    { id: 6, name: 'Corn in a Cup', category: 'sides', description: 'Fresh buttered corn kernels in a cup', image: '/Images/Corn.jpg' },
-    { id: 7, name: 'Roasted Corn', category: 'sides', description: 'Smoky flame-roasted corn on the cob with seasoning', image: '/Images/RoastedCorn.jpg' },
-    { id: 8, name: 'Skewers', category: 'main', description: 'Grilled skewers packed with flavour', image: '/Images/Skewers.jpg' },
-    { id: 9, name: 'Drinks', category: 'drinks', description: 'Refreshing cold drinks to complement your meal', image: '/Images/Drinks.jpg' },
+    { id: 1, name: 'Cheesy Fries', category: 'fries', description: 'Golden fries loaded with melted cheese and toppings', image: `${BASE}Images/Cheesyfries.jpg` },
+    { id: 2, name: 'Waffle Fries', category: 'fries', description: 'Crispy waffle-cut fries with seasoning', image: `${BASE}Images/WaffleFries.jpg` },
+    { id: 3, name: 'Fries', category: 'fries', description: 'Classic golden fries with our special seasoning', image: `${BASE}Images/Fries.jpg` },
+    { id: 4, name: 'Chips & Tenders', category: 'main', description: 'Crispy chicken tenders with golden fries', image: `${BASE}Images/ChipsandTenders.jpg` },
+    { id: 5, name: 'Chips on a Stick', category: 'main', description: 'Delicious spiral-cut potato chips on a stick', image: `${BASE}Images/Chipsonastick.jpg` },
+    { id: 6, name: 'Corn in a Cup', category: 'sides', description: 'Fresh buttered corn kernels in a cup', image: `${BASE}Images/Corn.jpg` },
+    { id: 7, name: 'Roasted Corn', category: 'sides', description: 'Smoky flame-roasted corn on the cob with seasoning', image: `${BASE}Images/RoastedCorn.jpg` },
+    { id: 8, name: 'Skewers', category: 'main', description: 'Grilled skewers packed with flavour', image: `${BASE}Images/Skewers.jpg` },
+    { id: 9, name: 'Drinks', category: 'drinks', description: 'Refreshing cold drinks to complement your meal', image: `${BASE}Images/Drinks.jpg` },
   ]
 
   const categories = [
