@@ -37,6 +37,7 @@ export default function Contact() {
         <p>Get in touch with Coastal Spuds today</p>
       </div>
 
+      <div className="contact-body">
       <div className="container contact-container">
         <div className="contact-info">
           <h2>Contact Information</h2>
@@ -157,6 +158,7 @@ export default function Contact() {
             </button>
           </form>
         </div>
+      </div>
       </div>
     </main>
   )
