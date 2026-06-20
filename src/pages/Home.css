@@ -4,37 +4,44 @@
 
 /* Hero Section */
 .hero {
-  background: linear-gradient(135deg, var(--primary-blue) 0%, #003d66 100%);
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+              url('/Images/Coastal_spuds.jpeg') center/cover no-repeat;
   color: var(--white);
-  padding: 80px 20px;
+  padding: 155px 20px 80px;
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 40px;
   min-height: 500px;
+  position: relative;
 }
 
 .hero-content {
   flex: 1;
   max-width: 600px;
+  z-index: 2;
 }
 
 .hero h1 {
   font-size: 3.5rem;
   margin-bottom: 1rem;
   animation: fadeInDown 0.8s ease;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+  font-weight: 700;
 }
 
 .hero p {
   font-size: 1.3rem;
   margin-bottom: 2rem;
   animation: fadeInUp 0.8s ease;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
 }
 
 .hero-image {
   font-size: 5rem;
   animation: bounce 2s infinite;
+  display: none;
 }
 
 @keyframes fadeInDown {
@@ -82,16 +89,12 @@
   text-align: center;
   transition: all 0.3s ease;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-top: 4px solid var(--accent-orange);
 }
 
 .feature-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
-
-.feature-icon {
-  font-size: 3rem;
-  margin-bottom: 1rem;
 }
 
 .feature-card h3 {
@@ -113,14 +116,37 @@
 
 .menu-item {
   background: var(--white);
-  padding: 1.5rem;
   border-radius: 8px;
-  border-left: 4px solid var(--accent-orange);
+  border-top: 4px solid var(--accent-orange);
   transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
 }
 
 .menu-item:hover {
-  box-shadow: 0 4px 12px rgba(255, 107, 53, 0.2);
+  box-shadow: 0 4px 12px rgba(220, 38, 38, 0.2);
+  transform: translateY(-2px);
+}
+
+.menu-item-image {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.menu-item-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.menu-item:hover .menu-item-image img {
+  transform: scale(1.05);
+}
+
+.menu-item-content {
+  padding: 1.2rem 1.5rem;
 }
 
 .menu-item h3 {
@@ -130,19 +156,206 @@
 
 .menu-item p {
   color: var(--text-light);
-  margin-bottom: 1rem;
   font-size: 0.95rem;
+  margin: 0;
 }
 
-.price {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: var(--accent-orange);
+/* Our Fleet Section */
+.fleet-section {
+  background-color: var(--light-bg);
+}
+
+.fleet-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+}
+
+.fleet-card {
+  background: var(--white);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border-top: 4px solid var(--accent-orange);
+}
+
+.fleet-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.fleet-image {
+  width: 100%;
+  height: 280px;
+  overflow: hidden;
+}
+
+.fleet-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.fleet-card:hover .fleet-image img {
+  transform: scale(1.05);
+}
+
+.fleet-info {
+  padding: 1.5rem 2rem 2rem;
+}
+
+.fleet-info h3 {
+  color: var(--primary-blue);
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.fleet-info p {
+  color: var(--text-light);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .fleet-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .fleet-image {
+    height: 220px;
+  }
+}
+
+/* Reviews/Testimonials Section */
+.reviews-section {
+  background-color: var(--light-bg);
+}
+
+.testimonials-carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto 3rem;
+}
+
+.testimonials-pair {
+  display: flex;
+  gap: 1.5rem;
+  flex: 1;
+}
+
+.carousel-btn {
+  background: var(--primary-blue);
+  color: var(--white);
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.carousel-btn:hover {
+  background: var(--accent-orange);
+  transform: scale(1.1);
+}
+
+.testimonial-card {
+  background: var(--white);
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  min-height: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  animation: slideInFromRight 0.6s ease;
+  border-left: 4px solid var(--accent-orange);
+}
+
+@keyframes slideInFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.testimonial-text {
+  font-size: 1.1rem;
+  color: var(--text-dark);
+  font-style: italic;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.author-image {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--primary-blue);
+}
+
+.author-info h4 {
+  color: var(--primary-blue);
+  margin: 0;
+  font-size: 1rem;
+}
+
+.author-info p {
+  color: var(--text-light);
+  margin: 0.25rem 0 0;
+  font-size: 0.85rem;
+}
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid var(--primary-blue);
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dot.active {
+  background-color: var(--primary-blue);
+  width: 32px;
+  border-radius: 6px;
+}
+
+.dot:hover {
+  background-color: var(--accent-orange);
+  border-color: var(--accent-orange);
 }
 
 /* CTA Section */
 .cta-section {
-  background: linear-gradient(135deg, var(--accent-orange) 0%, #e55a24 100%);
+  background: linear-gradient(135deg, var(--primary-blue) 0%, #003d66 100%);
   color: var(--white);
   padding: 60px 20px;
 }
@@ -175,7 +388,8 @@
 @media (max-width: 768px) {
   .hero {
     flex-direction: column;
-    padding: 60px 20px;
+    padding: 100px 20px 60px;
+    gap: 20px;
   }
 
   .hero h1 {
@@ -186,8 +400,33 @@
     font-size: 1.1rem;
   }
 
-  .hero-image {
-    font-size: 3rem;
+  .testimonials-carousel {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .testimonials-pair {
+    flex-direction: column;
+  }
+
+  .carousel-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+  }
+
+  .testimonial-card {
+    min-height: auto;
+    padding: 1.5rem;
+  }
+
+  .testimonial-text {
+    font-size: 1rem;
+  }
+
+  .author-image {
+    width: 50px;
+    height: 50px;
   }
 
   .cta-content h2 {

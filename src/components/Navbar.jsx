@@ -11,7 +11,8 @@ export default function Navbar({ isEnquireOpen, setIsEnquireOpen }) {
       <nav className="navbar">
         <div className="nav-container">
           <Link to="/" className="nav-logo">
-            🥔 Coastal Spuds
+            <img src="/Images/CoastalBaySpudsLogo.jpg" alt="Coastal Bay Spuds" className="logo-img" />
+            <span className="logo-name">Coastal Bay Spuds</span>
           </Link>
 
           <div className={`nav-menu ${isMenuOpen ? 'active' : ''}`}>

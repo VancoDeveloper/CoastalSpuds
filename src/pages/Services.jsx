@@ -6,48 +6,42 @@ export default function Services() {
     {
       id: 1,
       name: 'Birthday Parties',
-      icon: '🎂',
-      price: 'Starting $300',
+      image: '/Images/Birthday Event.jpg',
       description: 'Perfect for all ages! Customizable menu for 20-200+ guests',
       includes: ['Full food service', 'Setup & cleanup', 'Menu customization', 'Serving staff'],
     },
     {
       id: 2,
       name: 'Weddings',
-      icon: '💍',
-      price: 'Custom quote',
+      image: '/Images/Wedding.jpg',
       description: 'Make your special day even more memorable with gourmet cuisine',
       includes: ['Premium menu options', 'Professional catering', 'Bar service available', 'Full event coordination'],
     },
     {
       id: 3,
       name: 'Corporate Events',
-      icon: '💼',
-      price: 'Starting $400',
+      image: '/Images/Corporate Event.jpg',
       description: 'Impress your team with quality food at your company event',
       includes: ['Flexible menu', 'Professional setup', 'Efficient service', 'Vegetarian options'],
     },
     {
       id: 4,
       name: 'Festivals & Fairs',
-      icon: '🎪',
-      price: 'Starting $200/day',
+      image: '/Images/Festival.jpg',
       description: 'Boost foot traffic at your festival with our popular food truck',
       includes: ['Full-day operation', 'Equipment provided', 'Staff included', 'Permit assistance'],
     },
     {
       id: 5,
       name: 'Private Events',
-      icon: '🏡',
-      price: 'Starting $250',
-      description: 'Intimate gatherings with that special Coastal Spuds touch',
+      image: '/Images/Private event.jpg',
+      description: 'Intimate gatherings with that special Coastal Bay Spuds touch',
       includes: ['Custom menu', 'Home delivery', 'Professional setup', 'Full service'],
     },
     {
       id: 6,
       name: 'Holiday Catering',
-      icon: '🎄',
-      price: 'Starting $350',
+      image: '/Images/Christmas.jpg',
       description: 'Celebrate the season with festive potato dishes and more',
       includes: ['Seasonal menu', 'Holiday decorations', 'Full catering service', 'Advance booking discount'],
     },
@@ -64,23 +58,26 @@ export default function Services() {
         <div className="services-grid">
           {services.map(service => (
             <div key={service.id} className="service-card">
-              <div className="service-icon">{service.icon}</div>
-              <h3>{service.name}</h3>
-              <p className="service-description">{service.description}</p>
-              <p className="service-price">{service.price}</p>
-              
-              <div className="includes">
-                <h4>What's Included:</h4>
-                <ul>
-                  {service.includes.map((item, idx) => (
-                    <li key={idx}>✓ {item}</li>
-                  ))}
-                </ul>
+              <div className="service-card-image">
+                <img src={service.image} alt={service.name} />
               </div>
+              <div className="service-card-content">
+                <h3>{service.name}</h3>
+                <p className="service-description">{service.description}</p>
 
-              <Link to="/contact" className="btn btn-primary" style={{ marginTop: 'auto' }}>
-                Get Quote
-              </Link>
+                <div className="includes">
+                  <h4>What's Included:</h4>
+                  <ul>
+                    {service.includes.map((item, idx) => (
+                      <li key={idx}>✓ {item}</li>
+                    ))}
+                  </ul>
+                </div>
+
+                <Link to="/contact" className="btn btn-primary" style={{ marginTop: 'auto' }}>
+                  Get Quote
+                </Link>
+              </div>
             </div>
           ))}
         </div>
@@ -91,7 +88,6 @@ export default function Services() {
           <div className="pricing-grid">
             <div className="pricing-card">
               <h3>Small Groups (20-50)</h3>
-              <p className="pricing-amount">$300 - $500</p>
               <ul>
                 <li>Menu selection</li>
                 <li>Full service</li>
@@ -101,7 +97,6 @@ export default function Services() {
             </div>
             <div className="pricing-card highlight">
               <h3>Medium Events (50-150)</h3>
-              <p className="pricing-amount">$600 - $1200</p>
               <ul>
                 <li>Premium menu</li>
                 <li>Full catering</li>
@@ -111,7 +106,6 @@ export default function Services() {
             </div>
             <div className="pricing-card">
               <h3>Large Events (150+)</h3>
-              <p className="pricing-amount">Custom Quote</p>
               <ul>
                 <li>Custom menu</li>
                 <li>Full coordination</li>

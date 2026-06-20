@@ -1,6 +1,6 @@
 :root {
   --primary-blue: #004e89;
-  --accent-orange: #ff6b35;
+  --accent-orange: #dc2626;
   --light-bg: #f9f9f9;
   --text-dark: #333;
   --text-light: #666;
@@ -45,7 +45,7 @@ main {
 }
 
 .btn-secondary:hover {
-  background-color: #e55a24;
+  background-color: #b91c1c;
   transform: translateY(-2px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
