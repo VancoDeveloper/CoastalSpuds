@@ -1,12 +1,19 @@
 .home {
   min-height: 100vh;
+  background: linear-gradient(
+    to bottom,
+    #000000 0%,
+    #000000 15%,
+    #002244 30%,
+    #004e89 48%,
+    #004e89 68%,
+    #b8d9f0 83%,
+    #ffffff 100%
+  );
 }
 
 /* Hero Section */
 .hero {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   color: var(--white);
   padding: 155px 20px 80px;
   text-align: center;
@@ -161,9 +168,18 @@
   margin: 0;
 }
 
+/* Section titles on dark/blue gradient — override App.css default */
+.features .section-title,
+.menu-preview .section-title,
+.fleet-section .section-title,
+.reviews-section .section-title {
+  color: var(--white);
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+}
+
 /* Our Fleet Section */
 .fleet-section {
-  background-color: var(--light-bg);
+  background-color: transparent;
 }
 
 .fleet-grid {
@@ -232,7 +248,7 @@
 
 /* Reviews/Testimonials Section */
 .reviews-section {
-  background-color: var(--light-bg);
+  background-color: transparent;
 }
 
 .testimonials-carousel {
@@ -251,8 +267,8 @@
 }
 
 .carousel-btn {
-  background: var(--primary-blue);
-  color: var(--white);
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--primary-blue);
   border: none;
   width: 50px;
   height: 50px;
@@ -264,7 +280,8 @@
 }
 
 .carousel-btn:hover {
-  background: var(--accent-orange);
+  background: var(--white);
+  color: var(--accent-orange);
   transform: scale(1.1);
 }
 
@@ -356,8 +373,8 @@
 
 /* CTA Section */
 .cta-section {
-  background: linear-gradient(135deg, var(--primary-blue) 0%, #003d66 100%);
-  color: var(--white);
+  background: transparent;
+  color: var(--text-dark);
   padding: 60px 20px;
 }
 
@@ -368,11 +385,13 @@
 .cta-content h2 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
+  color: var(--primary-blue);
 }
 
 .cta-content p {
   font-size: 1.2rem;
   margin-bottom: 2rem;
+  color: var(--text-light);
 }
 
 .cta-buttons {

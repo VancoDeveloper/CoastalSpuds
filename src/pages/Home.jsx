@@ -63,14 +63,10 @@ export default function Home() {
   const nextReview = () => setCurrentPair((prev) => (prev + 1) % totalPairs)
   const prevReview = () => setCurrentPair((prev) => (prev - 1 + totalPairs) % totalPairs)
 
-  const heroStyle = {
-    backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(${BASE}Images/Coastal_spuds.jpeg)`
-  }
-
   return (
     <main className="home">
       {/* Hero Section */}
-      <section className="hero" style={heroStyle}>
+      <section className="hero">
         <div className="hero-content">
           <h1>Welcome to Coastal Spuds</h1>
           <p>Delicious Gourmet Potato Dishes for Your Special Events</p>
