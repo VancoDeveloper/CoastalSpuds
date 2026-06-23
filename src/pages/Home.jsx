@@ -34,7 +34,7 @@ export default function Home() {
       id: 4,
       name: 'James Wilson',
       title: 'Festival Organizer',
-      text: "Coastal Bay Spuds brought incredible energy and truly delicious food to our festival. The crowd absolutely loved every dish, and the service was smooth and efficient even during the busiest periods. We're already planning to bring them back next year — can't wait to work together again!",
+      text: "Coastal Bay Spuds brought incredible energy and truly delicious food to our festival. The crowd absolutely loved every dish, and the service was smooth and efficient even during the busiest periods. We are already planning to bring them back next year and cannot wait to work together again!",
       image: `${BASE}Images/Profile4.jpg`
     },
     {
@@ -48,7 +48,7 @@ export default function Home() {
       id: 6,
       name: 'David Thompson',
       title: 'Community Coordinator',
-      text: 'The entire community absolutely loved Coastal Bay Spuds at our community event! The ingredients were fresh, the dishes were creative and full of flavour, and the overall vibe they brought to the event was second to none. People are still talking about it weeks later — a truly memorable experience!',
+      text: 'The entire community absolutely loved Coastal Bay Spuds at our community event! The ingredients were fresh, the dishes were creative and full of flavour, and the overall vibe they brought to the event was second to none. People are still talking about it weeks later. It was a truly memorable experience!',
       image: `${BASE}Images/Profile6.jpg`
     }
   ]
@@ -104,7 +104,7 @@ export default function Home() {
                 </svg>
               </div>
               <h3>We Come to You</h3>
-              <p>Our fully equipped catering service travels directly to your venue — whether it's a beachside location, corporate park, festival grounds, or your own backyard. No event is too far or too small.</p>
+              <p>Our fully equipped catering service travels directly to your venue, whether it is a beachside location, corporate park, festival grounds, or your own backyard. No event is too far or too small.</p>
             </div>
             <div className="feature-card">
               <div className="feature-icon">
@@ -148,7 +148,7 @@ export default function Home() {
               </div>
               <div className="menu-item-content">
                 <h3>Chips & Tenders</h3>
-                <p>Hand-crumbed chicken strips, golden and crispy on the outside and juicy inside, served alongside a generous portion of our seasoned fries — a crowd-pleasing combo that satisfies every time.</p>
+                <p>Hand-crumbed chicken strips, golden and crispy on the outside and juicy inside, served alongside a generous portion of our seasoned fries. A crowd-pleasing combo that satisfies every time.</p>
               </div>
             </div>
             <div className="menu-item">
@@ -189,7 +189,7 @@ export default function Home() {
               </div>
               <div className="fleet-info">
                 <h3>Coastal Spuds</h3>
-                <p>Our flagship catering service specialises in gourmet potato dishes that keep guests coming back for more. From loaded cheesy fries and waffle chips to chips on a stick, we bring the full potato experience right to your event — fresh, hot, and absolutely delicious.</p>
+                <p>Our flagship catering service specialises in gourmet potato dishes that keep guests coming back for more. From loaded cheesy fries and waffle chips to chips on a stick, we bring the full potato experience right to your event, fresh, hot, and absolutely delicious.</p>
               </div>
             </div>
             <div className="fleet-card">

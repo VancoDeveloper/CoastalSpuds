@@ -9,7 +9,7 @@ export default function Services() {
       id: 1,
       name: 'Birthday Parties',
       image: `${BASE}Images/Birthday Event.jpg`,
-      description: 'Perfect for all ages! Customizable menu for 20–200+ guests.',
+      description: 'Perfect for all ages! Customizable menu for 20 to 200 or more guests.',
       includes: ['Full food service', 'Setup & cleanup', 'Menu customization', 'Serving staff'],
     },
     {
@@ -94,12 +94,12 @@ export default function Services() {
             <div className="pricing-card">
               <div className="pricing-badge">Starter</div>
               <h3>Small Groups</h3>
-              <p className="pricing-guests">20 – 50 guests</p>
+              <p className="pricing-guests">20 to 50 guests</p>
               <ul>
                 <li>Menu selection</li>
                 <li>Full service</li>
                 <li>Setup & cleanup</li>
-                <li>2–3 hour event</li>
+                <li>2 to 3 hour event</li>
               </ul>
               <Link to="/contact" className="btn pricing-btn">Enquire</Link>
             </div>
@@ -107,12 +107,12 @@ export default function Services() {
             <div className="pricing-card highlight">
               <div className="pricing-badge">Most Popular</div>
               <h3>Medium Events</h3>
-              <p className="pricing-guests">50 – 150 guests</p>
+              <p className="pricing-guests">50 to 150 guests</p>
               <ul>
                 <li>Premium menu</li>
                 <li>Full catering</li>
                 <li>Multiple staff</li>
-                <li>4–5 hour event</li>
+                <li>4 to 5 hour event</li>
               </ul>
               <Link to="/contact" className="btn pricing-btn highlight-btn">Enquire</Link>
             </div>

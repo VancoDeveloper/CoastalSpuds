@@ -15,7 +15,7 @@ export default function Footer() {
               <img src={`${import.meta.env.BASE_URL}Images/CoastalBaySpudsLogo.jpg`} alt="Coastal Bay Spuds" className="footer-logo" />
               <span className="footer-brand-name">Coastal Bay Spuds</span>
             </Link>
-            <p className="footer-tagline">Delicious gourmet potato dishes for your special events. Two trucks, one passion — great food.</p>
+            <p className="footer-tagline">Delicious gourmet potato dishes for your special events. Two catering services, one passion for great food.</p>
           </div>
 
           {/* Quick Links */}
@@ -35,6 +35,7 @@ export default function Footer() {
             <ul>
               <li>Coastal Spuds</li>
               <li>Coastal Skewers</li>
+              <li>Corn Masters</li>
             </ul>
             <h4 style={{ marginTop: '1.5rem' }}>Events We Cover</h4>
             <ul>
@@ -54,7 +55,7 @@ export default function Footer() {
               </li>
               <li>
                 <span className="footer-contact-icon">📞</span>
-                0406 082 114
+                0406 082 114 / 0426283983
               </li>
               <li>
                 <span className="footer-contact-icon">✉️</span>
