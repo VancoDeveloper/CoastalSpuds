@@ -11,7 +11,7 @@ export default function Navbar({ isEnquireOpen, setIsEnquireOpen }) {
       <nav className="navbar">
         <div className="nav-container">
           <Link to="/" className="nav-logo">
-            <span className="brand-coastal">Coastal</span>
+            <span className="brand-coastal">Coastal Bay</span>
             <span className="brand-spuds">Spuds</span>
           </Link>
 
