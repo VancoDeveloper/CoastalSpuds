@@ -11,35 +11,35 @@ export default function Home() {
   const reviews = [
     {
       id: 1,
-      name: 'Sarah Johnson',
+      name: 'Liam Carter',
       title: 'Event Organizer',
       text: 'Coastal Bay Spuds was the undeniable highlight of our corporate event! The food was absolutely delicious, the presentation was impressive, and the service from start to finish was exceptional. Every single guest was raving about it. Highly recommend!',
       image: `${BASE}Images/Profile1.jpg`
     },
     {
       id: 2,
-      name: 'Mike Chen',
+      name: 'Amara Johnson',
       title: 'Wedding Planner',
       text: "Our wedding guests couldn't stop raving about the catering service! Fresh, creative, and absolutely delicious. The team was professional, punctual, and made the whole experience effortless. Without a doubt the best catering decision we made.",
       image: `${BASE}Images/Profile2.jpg`
     },
     {
       id: 3,
-      name: 'Emma Davis',
+      name: 'Marcus Davis',
       title: 'Party Host',
       text: 'What a truly fantastic experience from start to finish! The team arrived early, set up without any fuss, and the food was absolutely outstanding. My guests were impressed and kept asking for seconds. I will definitely be booking Coastal Bay Spuds again for my next party!',
       image: `${BASE}Images/Profile3.jpg`
     },
     {
       id: 4,
-      name: 'James Wilson',
+      name: 'Emmanuel Osei',
       title: 'Festival Organizer',
       text: "Coastal Bay Spuds brought incredible energy and truly delicious food to our festival. The crowd absolutely loved every dish, and the service was smooth and efficient even during the busiest periods. We are already planning to bring them back next year and cannot wait to work together again!",
       image: `${BASE}Images/Profile4.jpg`
     },
     {
       id: 5,
-      name: 'Lisa Rodriguez',
+      name: 'Zara Williams',
       title: 'Business Owner',
       text: 'Coastal Bay Spuds was absolutely perfect for our company gathering! The food quality, menu variety, and customer service were all top-notch. Our team was thoroughly impressed, and several colleagues have already mentioned booking them for their own personal events. Highly impressed and highly recommended!',
       image: `${BASE}Images/Profile5.jpg`

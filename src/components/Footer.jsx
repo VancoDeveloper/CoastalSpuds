@@ -50,15 +50,15 @@ export default function Footer() {
             <h4>Get In Touch</h4>
             <ul className="footer-contact-list">
               <li>
-                <span className="footer-contact-icon">📍</span>
+                <span className="footer-contact-icon"></span>
                 Sydney, Australia
               </li>
               <li>
-                <span className="footer-contact-icon">📞</span>
+                <span className="footer-contact-icon"></span>
                 0406 082 114 / 0426 283 983
               </li>
               <li>
-                <span className="footer-contact-icon">✉️</span>
+                <span className="footer-contact-icon"></span>
                 info@coastalbayspuds.com.au
               </li>
             </ul>
