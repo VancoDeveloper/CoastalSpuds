@@ -12,40 +12,103 @@
 /* Hero Section */
 .hero {
   color: #004e89;
-  padding: 155px 20px 80px;
-  text-align: center;
+  padding: 130px 60px 90px;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 40px;
-  min-height: 500px;
+  gap: 70px;
+  min-height: 540px;
   position: relative;
 }
 
+/* Logo */
+.hero-logo-wrapper {
+  flex-shrink: 0;
+  position: relative;
+}
+
+.hero-logo-ring {
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  padding: 6px;
+  background: conic-gradient(
+    #0050ff 0deg,
+    #00cfff 90deg,
+    #ffffff 180deg,
+    #00cfff 270deg,
+    #0050ff 360deg
+  );
+  animation: ring-rotate 6s linear infinite;
+  box-shadow:
+    0 0 0 3px rgba(0, 80, 255, 0.1),
+    0 0 32px rgba(0, 80, 255, 0.35),
+    0 0 64px rgba(0, 144, 255, 0.18);
+}
+
+.hero-logo {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #ffffff;
+  display: block;
+}
+
+@keyframes ring-rotate {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* Text content */
 .hero-content {
   flex: 1;
-  max-width: 600px;
-  z-index: 2;
+  max-width: 560px;
+  text-align: left;
+}
+
+.hero-welcome {
+  display: block;
+  font-size: 0.95rem;
+  color: #888;
+  font-style: italic;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-bottom: 0.6rem;
+  animation: fadeInDown 0.6s ease;
 }
 
 .hero h1 {
   font-size: 3.5rem;
-  margin-bottom: 1rem;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 0;
   animation: fadeInDown 0.8s ease;
   text-shadow: none;
-  font-weight: 700;
+  background: linear-gradient(135deg, #0050ff 0%, #0090ff 50%, #003399 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-divider {
+  width: 70px;
+  height: 3px;
+  background: linear-gradient(to right, #0050ff, #00cfff);
+  border-radius: 2px;
+  margin: 1.3rem 0;
 }
 
 .hero p {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   margin-bottom: 2rem;
+  color: #555;
+  line-height: 1.7;
   animation: fadeInUp 0.8s ease;
   text-shadow: none;
 }
 
 .hero-image {
-  font-size: 5rem;
-  animation: bounce 2s infinite;
   display: none;
 }
 
@@ -405,7 +468,20 @@
   .hero {
     flex-direction: column;
     padding: 100px 20px 60px;
-    gap: 20px;
+    gap: 30px;
+  }
+
+  .hero-logo-ring {
+    width: 200px;
+    height: 200px;
+  }
+
+  .hero-content {
+    text-align: center;
+  }
+
+  .hero-divider {
+    margin: 1.3rem auto;
   }
 
   .hero h1 {

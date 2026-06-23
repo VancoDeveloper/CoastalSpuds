@@ -67,14 +67,20 @@ export default function Home() {
     <main className="home">
       {/* Hero Section */}
       <section className="hero">
+        <div className="hero-logo-wrapper">
+          <div className="hero-logo-ring">
+            <img src={`${BASE}Images/CoastalBaySpudsLogo.jpg`} alt="Coastal Bay Spuds" className="hero-logo" />
+          </div>
+        </div>
         <div className="hero-content">
-          <h1>Welcome to Coastal Spuds</h1>
+          <span className="hero-welcome">Welcome to</span>
+          <h1>Coastal Bay Spuds</h1>
+          <div className="hero-divider"></div>
           <p>Delicious Gourmet Potato Dishes for Your Special Events</p>
           <Link to="/menu" className="btn btn-secondary">
             Explore Our Menu
           </Link>
         </div>
-        <div className="hero-image">🥔🚚</div>
       </section>
 
       {/* Features Section */}
