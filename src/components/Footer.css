@@ -1,10 +1,5 @@
 .footer {
-  background: linear-gradient(
-    to bottom,
-    #ffffff 0%,
-    #004e89 50%,
-    #000000 100%
-  );
+  background: #000000;
   color: var(--white);
   margin-top: auto;
 }
@@ -49,17 +44,16 @@
   line-height: 1.7;
 }
 
-/* Brand column sits over the white top-left — use dark text for readability */
 .footer-brand .footer-brand-name {
-  color: #1a1a1a;
+  color: var(--white);
 }
 
 .footer-brand .footer-tagline {
-  color: #444444;
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .footer-brand .footer-logo {
-  border-color: rgba(0, 0, 0, 0.2);
+  border-color: rgba(255, 255, 255, 0.4);
 }
 
 /* Section Columns */
@@ -69,8 +63,8 @@
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-bottom: 1.2rem;
-  color: #f97316;
-  border-bottom: 2px solid rgba(249, 115, 22, 0.35);
+  color: var(--white);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
   padding-bottom: 0.5rem;
 }
 
@@ -82,18 +76,18 @@
 
 .footer-section ul li {
   margin-bottom: 0.7rem;
-  color: #4ade80;
+  color: rgba(255, 255, 255, 0.75);
   font-size: 0.9rem;
 }
 
 .footer-section ul a {
-  color: #4ade80;
+  color: rgba(255, 255, 255, 0.75);
   transition: color 0.3s ease;
   font-size: 0.9rem;
 }
 
 .footer-section ul a:hover {
-  color: #f97316;
+  color: var(--white);
 }
 
 /* Contact List */
@@ -163,16 +157,9 @@
 }
 
 .footer-bottom p {
+  color: rgba(255, 255, 255, 0.6);
   font-size: 0.85rem;
   margin: 0;
-}
-
-.footer-bottom-inner p:first-child {
-  color: #f97316;
-}
-
-.footer-bottom-inner p:last-child {
-  color: #4ade80;
 }
 
 @media (max-width: 1024px) {
