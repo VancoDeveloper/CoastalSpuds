@@ -185,7 +185,7 @@ export default function Home() {
           <div className="fleet-grid">
             <div className="fleet-card">
               <div className="fleet-image">
-                <img src={`${BASE}Images/CoastalSpuds.png`} alt="Coastal Spuds" />
+                <img src={`${BASE}Images/CoastalBaySpuds1.jpg`} alt="Coastal Spuds" />
               </div>
               <div className="fleet-info">
                 <h3>Coastal Spuds</h3>
