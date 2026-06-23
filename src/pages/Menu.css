@@ -1,10 +1,16 @@
 .menu-page {
   min-height: 100vh;
-  background-color: var(--light-bg);
+  background: linear-gradient(
+    to bottom,
+    #004e89 0%,
+    #2980b9 35%,
+    #b8d9f0 70%,
+    #ffffff 100%
+  );
 }
 
 .menu-header {
-  background: linear-gradient(135deg, #000000 0%, var(--primary-blue) 35%, #dc2626 70%, #1a1a1a 100%);
+  background: transparent;
   color: var(--white);
   padding: 80px 20px;
   text-align: center;
