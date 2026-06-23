@@ -12,8 +12,8 @@ export default function Menu() {
     { id: 3, name: 'Fries',           category: 'fries',  description: 'Classic golden fries with our special seasoning',               image: `${BASE}Images/Fries.jpg` },
     { id: 4, name: 'Chips & Tenders', category: 'main',   description: 'Crispy chicken tenders with golden fries',                      image: `${BASE}Images/ChipsandTenders.jpg` },
     { id: 5, name: 'Chips on a Stick',category: 'main',   description: 'Delicious spiral-cut potato chips on a stick',                  image: `${BASE}Images/Chipsonastick.jpg` },
-    { id: 6, name: 'Corn in a Cup',   category: 'sides',  description: 'Fresh buttered corn kernels in a cup',                          image: `${BASE}Images/Corn.jpg` },
-    { id: 7, name: 'Roasted Corn',    category: 'sides',  description: 'Smoky flame-roasted corn on the cob with seasoning',            image: `${BASE}Images/RoastedCorn.jpg` },
+    { id: 6, name: 'Corn in a Cup',   category: 'main',   description: 'Fresh buttered corn kernels in a cup',                          image: `${BASE}Images/Corn.jpg` },
+    { id: 7, name: 'Roasted Corn',    category: 'main',   description: 'Smoky flame-roasted corn on the cob with seasoning',            image: `${BASE}Images/RoastedCorn.jpg` },
     { id: 8, name: 'Skewers',         category: 'main',   description: 'Grilled skewers packed with flavour',                           image: `${BASE}Images/Skewers.jpg` },
     { id: 9, name: 'Drinks',          category: 'drinks', description: 'Refreshing cold drinks to complement your meal',                image: `${BASE}Images/Drinks.jpg` },
   ]
@@ -22,14 +22,12 @@ export default function Menu() {
     { id: 'all',    name: 'All Items' },
     { id: 'fries',  name: 'Fries'     },
     { id: 'main',   name: 'Mains'     },
-    { id: 'sides',  name: 'Sides'     },
     { id: 'drinks', name: 'Drinks'    },
   ]
 
   const categoryInfo = {
     fries:  { name: 'Fries'  },
     main:   { name: 'Mains'  },
-    sides:  { name: 'Sides'  },
     drinks: { name: 'Drinks' },
   }
 
@@ -40,7 +38,6 @@ export default function Menu() {
   return (
     <main className="menu-page">
       <div className="menu-header">
-        <div className="menu-header-badge">Food Truck Favourites</div>
         <h1>Our Menu</h1>
         <div className="menu-header-divider"></div>
         <p>Fresh, delicious food made with love — ready for your next event</p>

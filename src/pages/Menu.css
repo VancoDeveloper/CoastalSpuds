@@ -16,19 +16,6 @@
   text-align: center;
 }
 
-.menu-header-badge {
-  display: inline-block;
-  background: rgba(0, 80, 255, 0.08);
-  border: 1px solid rgba(0, 80, 255, 0.3);
-  color: #0050ff;
-  font-size: 0.78rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  padding: 7px 22px;
-  border-radius: 50px;
-  margin-bottom: 1.5rem;
-}
 
 .menu-header h1 {
   font-size: 4.5rem;
