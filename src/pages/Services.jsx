@@ -3,59 +3,65 @@ import './Services.css'
 
 export default function Services() {
   const BASE = import.meta.env.BASE_URL
+
   const services = [
     {
       id: 1,
       name: 'Birthday Parties',
       image: `${BASE}Images/Birthday Event.jpg`,
-      description: 'Perfect for all ages! Customizable menu for 20-200+ guests',
+      description: 'Perfect for all ages! Customizable menu for 20–200+ guests.',
       includes: ['Full food service', 'Setup & cleanup', 'Menu customization', 'Serving staff'],
     },
     {
       id: 2,
       name: 'Weddings',
       image: `${BASE}Images/Wedding.jpg`,
-      description: 'Make your special day even more memorable with gourmet cuisine',
+      description: 'Make your special day even more memorable with gourmet cuisine.',
       includes: ['Premium menu options', 'Professional catering', 'Bar service available', 'Full event coordination'],
     },
     {
       id: 3,
       name: 'Corporate Events',
       image: `${BASE}Images/Corporate Event.jpg`,
-      description: 'Impress your team with quality food at your company event',
+      description: 'Impress your team with quality food at your next company event.',
       includes: ['Flexible menu', 'Professional setup', 'Efficient service', 'Vegetarian options'],
     },
     {
       id: 4,
       name: 'Festivals & Fairs',
       image: `${BASE}Images/Festival.jpg`,
-      description: 'Boost foot traffic at your festival with our popular food truck',
+      description: 'Boost foot traffic at your festival with our popular food truck.',
       includes: ['Full-day operation', 'Equipment provided', 'Staff included', 'Permit assistance'],
     },
     {
       id: 5,
       name: 'Private Events',
       image: `${BASE}Images/Private event.jpg`,
-      description: 'Intimate gatherings with that special Coastal Bay Spuds touch',
+      description: 'Intimate gatherings with that special Coastal Bay Spuds touch.',
       includes: ['Custom menu', 'Home delivery', 'Professional setup', 'Full service'],
     },
     {
       id: 6,
       name: 'Holiday Catering',
       image: `${BASE}Images/Christmas.jpg`,
-      description: 'Celebrate the season with festive potato dishes and more',
+      description: 'Celebrate the season with festive potato dishes and more.',
       includes: ['Seasonal menu', 'Holiday decorations', 'Full catering service', 'Advance booking discount'],
     },
   ]
 
   return (
     <main className="services-page">
+
+      {/* Header */}
       <div className="services-header">
         <h1>Our Services</h1>
+        <div className="services-header-divider"></div>
         <p>From intimate gatherings to large events, we've got you covered</p>
       </div>
 
       <div className="container">
+
+        {/* Service Cards */}
         <div className="services-grid">
           {services.map(service => (
             <div key={service.id} className="service-card">
@@ -65,54 +71,63 @@ export default function Services() {
               <div className="service-card-content">
                 <h3>{service.name}</h3>
                 <p className="service-description">{service.description}</p>
-
                 <div className="includes">
-                  <h4>What's Included:</h4>
+                  <h4>What's Included</h4>
                   <ul>
                     {service.includes.map((item, idx) => (
-                      <li key={idx}>✓ {item}</li>
+                      <li key={idx}>{item}</li>
                     ))}
                   </ul>
                 </div>
-
-                <Link to="/contact" className="btn btn-primary" style={{ marginTop: 'auto' }}>
-                  Get Quote
+                <Link to="/contact" className="btn btn-primary service-btn">
+                  Get a Quote
                 </Link>
               </div>
             </div>
           ))}
         </div>
 
-        {/* Pricing Section */}
+        {/* Pricing Packages */}
         <section className="pricing-info section">
           <h2 className="section-title">Pricing Packages</h2>
           <div className="pricing-grid">
             <div className="pricing-card">
-              <h3>Small Groups (20-50)</h3>
+              <div className="pricing-badge">Starter</div>
+              <h3>Small Groups</h3>
+              <p className="pricing-guests">20 – 50 guests</p>
               <ul>
                 <li>Menu selection</li>
                 <li>Full service</li>
                 <li>Setup & cleanup</li>
-                <li>2-3 hour event</li>
+                <li>2–3 hour event</li>
               </ul>
+              <Link to="/contact" className="btn pricing-btn">Enquire</Link>
             </div>
+
             <div className="pricing-card highlight">
-              <h3>Medium Events (50-150)</h3>
+              <div className="pricing-badge">Most Popular</div>
+              <h3>Medium Events</h3>
+              <p className="pricing-guests">50 – 150 guests</p>
               <ul>
                 <li>Premium menu</li>
                 <li>Full catering</li>
                 <li>Multiple staff</li>
-                <li>4-5 hour event</li>
+                <li>4–5 hour event</li>
               </ul>
+              <Link to="/contact" className="btn pricing-btn highlight-btn">Enquire</Link>
             </div>
+
             <div className="pricing-card">
-              <h3>Large Events (150+)</h3>
+              <div className="pricing-badge">Enterprise</div>
+              <h3>Large Events</h3>
+              <p className="pricing-guests">150+ guests</p>
               <ul>
                 <li>Custom menu</li>
                 <li>Full coordination</li>
                 <li>Dedicated team</li>
                 <li>Extended hours</li>
               </ul>
+              <Link to="/contact" className="btn pricing-btn">Enquire</Link>
             </div>
           </div>
         </section>
@@ -125,6 +140,7 @@ export default function Services() {
             Contact Us Now
           </Link>
         </div>
+
       </div>
     </main>
   )
