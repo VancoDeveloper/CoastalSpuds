@@ -19,18 +19,18 @@ export default function Menu() {
   ]
 
   const categories = [
-    { id: 'all',    name: 'All Items', icon: '🍽️' },
-    { id: 'fries',  name: 'Fries',     icon: '🍟' },
-    { id: 'main',   name: 'Mains',     icon: '🍗' },
-    { id: 'sides',  name: 'Sides',     icon: '🌽' },
-    { id: 'drinks', name: 'Drinks',    icon: '🥤' },
+    { id: 'all',    name: 'All Items' },
+    { id: 'fries',  name: 'Fries'     },
+    { id: 'main',   name: 'Mains'     },
+    { id: 'sides',  name: 'Sides'     },
+    { id: 'drinks', name: 'Drinks'    },
   ]
 
   const categoryInfo = {
-    fries:  { name: 'Fries',  icon: '🍟' },
-    main:   { name: 'Mains',  icon: '🍗' },
-    sides:  { name: 'Sides',  icon: '🌽' },
-    drinks: { name: 'Drinks', icon: '🥤' },
+    fries:  { name: 'Fries'  },
+    main:   { name: 'Mains'  },
+    sides:  { name: 'Sides'  },
+    drinks: { name: 'Drinks' },
   }
 
   const filteredItems = selectedCategory === 'all'
@@ -54,7 +54,6 @@ export default function Menu() {
               className={`filter-btn ${selectedCategory === category.id ? 'active' : ''}`}
               onClick={() => setSelectedCategory(category.id)}
             >
-              <span className="filter-icon">{category.icon}</span>
               {category.name}
             </button>
           ))}
@@ -67,7 +66,7 @@ export default function Menu() {
                 <img src={item.image} alt={item.name} />
                 {categoryInfo[item.category] && (
                   <span className="card-badge">
-                    {categoryInfo[item.category].icon} {categoryInfo[item.category].name}
+                    {categoryInfo[item.category].name}
                   </span>
                 )}
               </div>
@@ -80,7 +79,6 @@ export default function Menu() {
         </div>
 
         <div className="menu-note">
-          <div className="menu-note-icon">📋</div>
           <h3>Available for All Events!</h3>
           <p>Contact us to order or customise your menu for your special occasion.</p>
         </div>
