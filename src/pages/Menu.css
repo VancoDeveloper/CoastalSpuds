@@ -37,28 +37,31 @@
 }
 
 .filter-btn {
-  padding: 12px 24px;
-  border: 2px solid var(--primary-blue);
-  background-color: var(--white);
-  color: var(--primary-blue);
-  border-radius: 25px;
+  padding: 11px 26px;
+  border: 2px solid #0050ff;
+  background: transparent;
+  color: #0050ff;
+  border-radius: 50px;
   font-weight: 700;
   cursor: pointer;
   transition: all 0.3s ease;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.3px;
 }
 
 .filter-btn:hover {
-  background-color: var(--primary-blue);
+  background: linear-gradient(135deg, #0050ff, #0090ff);
   color: var(--white);
+  border-color: transparent;
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 78, 137, 0.2);
+  box-shadow: 0 6px 18px rgba(0, 80, 255, 0.35);
 }
 
 .filter-btn.active {
-  background-color: var(--primary-blue);
+  background: linear-gradient(135deg, #0050ff, #0090ff);
   color: var(--white);
-  box-shadow: 0 4px 12px rgba(0, 78, 137, 0.3);
+  border-color: transparent;
+  box-shadow: 0 4px 14px rgba(0, 80, 255, 0.4);
 }
 
 .menu-grid {

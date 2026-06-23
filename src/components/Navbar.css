@@ -61,10 +61,21 @@
 }
 
 .nav-link.btn {
-  padding: 10px 20px;
-  border-radius: 4px;
+  padding: 10px 24px;
+  border-radius: 50px;
   color: var(--white);
-  background: #0047FF;
+  background: linear-gradient(135deg, #0050ff, #0090ff);
+  box-shadow: 0 3px 12px rgba(0, 80, 255, 0.4);
+  letter-spacing: 0.3px;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.nav-link.btn:hover {
+  background: linear-gradient(135deg, #0040cc, #007ae0);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 80, 255, 0.55);
+  color: var(--white);
 }
 
 .hamburger {
