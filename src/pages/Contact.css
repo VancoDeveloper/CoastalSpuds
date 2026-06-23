@@ -2,9 +2,9 @@
   min-height: 100vh;
   background: linear-gradient(
     to bottom,
-    #004e89 0%,
-    #2980b9 35%,
-    #b8d9f0 70%,
+    #0050ff 0%,
+    #0090ff 30%,
+    #7ecfff 65%,
     #ffffff 100%
   );
 }
