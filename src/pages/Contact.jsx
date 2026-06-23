@@ -50,7 +50,7 @@ export default function Contact() {
             </div>
             <div>
               <h3>Phone</h3>
-              <p>0406 082 114</p>
+              <p>0406 082 114 / 0426 283 983</p>
             </div>
           </div>
 

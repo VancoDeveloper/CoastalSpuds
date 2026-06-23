@@ -55,7 +55,7 @@ export default function Footer() {
               </li>
               <li>
                 <span className="footer-contact-icon">📞</span>
-                0406 082 114 / 0426283983
+                0406 082 114 / 0426 283 983
               </li>
               <li>
                 <span className="footer-contact-icon">✉️</span>
