@@ -33,11 +33,13 @@
   border-radius: 50%;
   padding: 6px;
   background: conic-gradient(
-    #0050ff 0deg,
-    #00cfff 90deg,
-    #ffffff 180deg,
-    #00cfff 270deg,
-    #0050ff 360deg
+    #000000 0deg,
+    #0050ff 60deg,
+    #00cfff 120deg,
+    #000000 180deg,
+    #0050ff 240deg,
+    #00cfff 300deg,
+    #000000 360deg
   );
   animation: ring-rotate 6s linear infinite;
   box-shadow:
@@ -53,11 +55,17 @@
   object-fit: cover;
   border: 5px solid #ffffff;
   display: block;
+  animation: logo-still 6s linear infinite;
 }
 
 @keyframes ring-rotate {
   from { transform: rotate(0deg); }
   to   { transform: rotate(360deg); }
+}
+
+@keyframes logo-still {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(-360deg); }
 }
 
 /* Text content */
