@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://coastalbayspuds.com.au/sitemap.xml
