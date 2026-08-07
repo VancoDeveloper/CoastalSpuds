@@ -195,6 +195,15 @@
   font-weight: 600;
 }
 
+.error-msg {
+  background: #e53935;
+  color: var(--white);
+  padding: 1rem 1.3rem;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
 .form-row {
   display: grid;
   grid-template-columns: 1fr 1fr;

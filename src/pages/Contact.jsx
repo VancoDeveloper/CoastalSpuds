@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import './Contact.css'
 
+const WEB3FORMS_ACCESS_KEY = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY
+
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: '',
@@ -11,20 +13,51 @@ export default function Contact() {
   })
 
   const [submitted, setSubmitted] = useState(false)
+  const [submitting, setSubmitting] = useState(false)
+  const [error, setError] = useState('')
 
   const handleChange = (e) => {
     const { name, value } = e.target
     setFormData(prev => ({ ...prev, [name]: value }))
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    console.log('Contact form submitted:', formData)
-    setSubmitted(true)
-    setTimeout(() => {
-      setFormData({ name: '', email: '', phone: '', subject: '', message: '' })
-      setSubmitted(false)
-    }, 3000)
+    setSubmitting(true)
+    setError('')
+
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json'
+        },
+        body: JSON.stringify({
+          access_key: WEB3FORMS_ACCESS_KEY,
+          subject: `New enquiry from ${formData.name}: ${formData.subject}`,
+          from_name: 'Coastal Bay Spuds Website',
+          ...formData
+        })
+      })
+
+      const result = await response.json()
+
+      if (result.success) {
+        setSubmitted(true)
+        setTimeout(() => {
+          setFormData({ name: '', email: '', phone: '', subject: '', message: '' })
+          setSubmitted(false)
+        }, 3000)
+      } else {
+        setError('Something went wrong. Please try again or call us directly.')
+      }
+    } catch (err) {
+      console.error('Error submitting contact form:', err)
+      setError('Something went wrong. Please try again or call us directly.')
+    } finally {
+      setSubmitting(false)
+    }
   }
 
   return (
@@ -116,6 +149,11 @@ export default function Contact() {
               ✓ Thank you! We'll get back to you soon.
             </div>
           )}
+          {error && (
+            <div className="error-msg">
+              {error}
+            </div>
+          )}
           <form onSubmit={handleSubmit}>
             <div className="form-row">
               <div className="form-group">
@@ -144,8 +182,8 @@ export default function Contact() {
               <textarea id="message" name="message" value={formData.message} onChange={handleChange} rows="6" required placeholder="Tell us about your event..."></textarea>
             </div>
 
-            <button type="submit" className="btn btn-primary">
-              Send Message
+            <button type="submit" className="btn btn-primary" disabled={submitting}>
+              {submitting ? 'Sending...' : 'Send Message'}
             </button>
           </form>
         </div>
